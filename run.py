@@ -4,34 +4,42 @@
 
 def gather_user_name():
     """
-    collect the name of the customer 
+    collect the name of the customer as variable and 
+    add validation steps for avoid accidental insertion of number 
+    add valildation also for none value
     """
-    user_name = input("enter your name:\n")
-    if user_name.isalpha():
-        return user_name
-    elif len(user_name) == 0:
-        print("username is mandatory")
-    else:
-        print("invalid username")
+    while True:
+        try:
+            user_name = input("enter your first name:\n")
+            if user_name.isalpha():
+                return user_name.capitalize()
+            elif len(user_name) == 0:
+                print("Ouch! Username is mandatory\n")
+            else:
+                print("Invalid username. Insert your first name only\n")
+        except ValueError:
+            print("Please try again")
         
 
 def daily_steps():
     """
     collect the average number of daily steps
-    """
-    try:
-        number_of_steps = int(input("Enter the average daily steps:\n"))
-        if number_of_steps > 0:
-            print(f"Hello {username}, your average daily steps are {number_of_steps}")
-            return number_of_steps
-        else:
-            print("invalid number. try again")
-    except ValueError:
-        print("only numbers accepted.")
-    #daily_steps = int(input("enter the average number of daily steps:\n"))
-    #return user_name
+    add validation for numbers only
 
-#def kcal_burned():
+    """
+    while True:
+        try:
+            number_of_steps = int(input("Enter the average number of your daily steps:\n"))
+            if number_of_steps > 0:
+                print(f"{username}, your average daily steps entered are {number_of_steps}\n")
+                return number_of_steps
+            else:
+                print("invalid number. try again\n")
+        except ValueError:
+            print("only numbers accepted.\n")
+    
+
+def kcal_burned():
     """
     define how many calories were burned so far
     Generally speaking, walking 10km will burn around 500-700 (i will use 600 
@@ -39,12 +47,24 @@ def daily_steps():
     calories for an average person this function will use this for calculate
     the kcal already burnt
     """
+    daily_kcal_burned = number_of_steps * 0.06
+    if daily_kcal_burned > 50:
+        print(f"Great news {username}, you already burned {daily_kcal_burned} Kcal today! keep going!\n")
+    else:
+        print(f"Hey {username}, you burned {daily_kcal_burned} kcal so far, but you can do better!\n")
 
 
 
 print("Welcome to our StepCounter App\n")
 print("This app was created for keep track of daily steps for weightloss\n")
-print("Let's start!\n")
+print("Let's start!")
 
-username = gather_user_name()
-number_of_steps = daily_steps()
+def main():
+    """
+    defined the main function 
+    """
+    username = gather_user_name()
+    number_of_steps = daily_steps()
+    daily_kcal_burned = kcal_burned()
+
+main()
