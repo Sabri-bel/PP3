@@ -19,15 +19,32 @@ def daily_steps():
     """
     collect the average number of daily steps
     """
-    number_of_steps = int(input("Enter the average daily steps:\n"))
-    print(number_of_steps)
+    try:
+        number_of_steps = int(input("Enter the average daily steps:\n"))
+        if number_of_steps > 0:
+            print(f"Hello {username}, your average daily steps are {number_of_steps}")
+            return number_of_steps
+        else:
+            print("invalid number. try again")
+    except ValueError:
+        print("only numbers accepted.")
     #daily_steps = int(input("enter the average number of daily steps:\n"))
     #return user_name
+
+#def kcal_burned():
+    """
+    define how many calories were burned so far
+    Generally speaking, walking 10km will burn around 500-700 (i will use 600 
+    as average of the 2 values)
+    calories for an average person this function will use this for calculate
+    the kcal already burnt
+    """
+
 
 
 print("Welcome to our StepCounter App\n")
 print("This app was created for keep track of daily steps for weightloss\n")
 print("Let's start!\n")
 
-gather_user_name()
-daily_steps()
+username = gather_user_name()
+number_of_steps = daily_steps()
