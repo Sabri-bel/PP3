@@ -2,6 +2,8 @@
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 
+
+
 def gather_user_name():
     """
     collect the name of the customer as variable and 
@@ -21,7 +23,7 @@ def gather_user_name():
             print("Please try again")
         
 
-def daily_steps():
+def daily_steps(username):
     """
     collect the average number of daily steps
     add validation for numbers only
@@ -39,7 +41,7 @@ def daily_steps():
             print("only numbers accepted.\n")
     
 
-def kcal_burned():
+def kcal_burned(username, number_of_steps):
     """
     define how many calories were burned so far
     Generally speaking, walking 10km will burn around 500-700 (i will use 600 
@@ -47,7 +49,8 @@ def kcal_burned():
     calories for an average person this function will use this for calculate
     the kcal already burnt
     """
-    daily_kcal_burned = number_of_steps * 0.06
+    #single_step = 10000 / 600 #600 kcal average for 10k km, single step calculated
+    daily_kcal_burned = round(number_of_steps * 0.06)
     if daily_kcal_burned > 50:
         print(f"Great news {username}, you already burned {daily_kcal_burned} Kcal today! keep going!\n")
     else:
@@ -60,11 +63,10 @@ print("This app was created for keep track of daily steps for weightloss\n")
 print("Let's start!")
 
 def main():
-    """
-    defined the main function 
-    """
+   
     username = gather_user_name()
-    number_of_steps = daily_steps()
-    daily_kcal_burned = kcal_burned()
+    number_of_steps = daily_steps(username)
+    daily_kcal_burned = kcal_burned(username, number_of_steps)
+
 
 main()
