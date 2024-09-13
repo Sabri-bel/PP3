@@ -5,8 +5,8 @@
 
 def gather_user_name():
     """
-    collect the name of the customer as variable and 
-    add validation steps for avoid accidental insertion of number 
+    collect the name of the customer as variable and
+    add validation steps for avoid accidental insertion of number
     add valildation also for none value
     """
 
@@ -31,9 +31,11 @@ def daily_steps(username):
 
     while True:
         try:
-            number_of_steps = int(input("Enter the average number of your daily steps:\n"))
+            number_of_steps = int(input(
+                "Enter the average number of your daily steps:\n"))
             if number_of_steps > 0:
-                print(f"{username}, your average daily steps entered are {number_of_steps}\n")
+                print(
+                    f"you entered {number_of_steps} steps.\n")
                 return number_of_steps
             else:
                 print("invalid number. try again\n")
@@ -44,7 +46,7 @@ def daily_steps(username):
 def kcal_burned(username, number_of_steps):
     """
     define how many calories were burned so far
-    Generally speaking, walking 10km will burn around 500-700 (i will use 600 
+    Generally speaking, walking 10km will burn around 500-700 (i will use 600
     as average of the 2 values)
     calories for an average person this function will use this for calculate
     the kcal already burnt
@@ -55,9 +57,11 @@ def kcal_burned(username, number_of_steps):
     daily_kcal_burned = round(number_of_steps * single_step)
 
     if daily_kcal_burned > 50:
-        print(f"Great news {username}, you already burned {daily_kcal_burned} Kcal today! keep going!\n")
+        print(f"Great news {username}, you already burned {daily_kcal_burned} \
+              Kcal today! keep going!\n")
     else:
-        print(f"Hey {username}, you burned {daily_kcal_burned} kcal so far, but you can do better!\n")
+        print(f"{username}, you burned {daily_kcal_burned} kcal so far, \
+              but you can do better!\n")
 
 
 print("Welcome to our StepCounter App\n")
