@@ -4,7 +4,7 @@ Welcome to my step counter app!
 
 The purpose app is to motivate user to an healthy life: user can enter the steps and he can see live the average amount of calories burned so far.
 
-[View my live project here]()
+[View my live project here](https://stepscounter-67b67669ecaa.herokuapp.com/)
 
 ## Features
 
