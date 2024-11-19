@@ -29,7 +29,7 @@ User can now add the average number of daily steps:
 
 ![low calories burned](/media/Screenshot%202024-09-14%20004006.png)
 
-- the other outcome is shown if the user burned more than 50 kcal:
+- the second outcome is shown if the user burned more than 50 kcal:
 
 ![high calorie burned](/media/Screenshot%202024-09-14%20000819.png)
 

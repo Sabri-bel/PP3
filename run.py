@@ -53,7 +53,8 @@ def kcal_burned(username, number_of_steps):
     calory rounded to the integer (no decimal number)
     """
 
-    single_step = 600 / 10000  # 600 kcal average for 10k km, single step calculated
+    # 600 kcal average for 10k km, single step calculated
+    single_step = 600 / 10000  
     daily_kcal_burned = round(number_of_steps * single_step)
 
     if daily_kcal_burned > 50:
