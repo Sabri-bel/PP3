@@ -67,3 +67,35 @@ The code passed without any errors.
 
 during pep8 validation, some lines were longer than 80. Using the backslash for fix this problem caused an unwanted space gap in gitpod:
 ![bug fouund in gitpod](/media/Screenshot%202024-09-14%20000836.png)
+
+## Deployment
+
+### Steps to deploy site using Heroku:
+- On the Heroku dashboard, select "New" and click "Create new app"
+  - insert the app name (it must be unique)
+  - Select the location (US or Europe)
+  - Click "Create app"
+- locate the settings tab:
+  - Scroll down to the config vars section and select "Reveal Config Vars"
+  - Add key "PORT" and value "8000" as config var
+  - Click "Add"
+  - Scroll down to Buildpacks and click "Add buildpack"
+  - Add "python" as buildpack and click "Save changes"
+  - Then, select "node.js" as second buildpack and click "Save changes" again
+- Go to the Deploy tab:
+  - Select GitHub and confirm the connection with the GitHub account
+  - Search for the repository and click "Connect"
+  - Scroll down to the deploy options and Select automatic deploys if you would like automatic deployment with each new push to the GitHub repository; or in manual deploy, select which branch to deploy and click "Deploy Branch"
+  - Heroku will start building the app
+- The link to the app can be found at the top of the page by clicking "Open app"
+
+
+### Steps to clone site:
+- In the GitHub repository, click the "Code" button.
+- Select "HTTPS" and copy the URL.
+- Open Git Bash and navigate to the repository where you would like to locate the cloned repository.
+- Type "git clone" followed by the copied URL.
+- Press enter to create the clone.
+
+## Credits:
+- all content was written by the developer
