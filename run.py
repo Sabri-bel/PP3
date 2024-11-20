@@ -82,6 +82,9 @@ def kcal_burned(username, number_of_steps):
         print(f"{username}, you burned {daily_kcal_burned} kcal so far, \
               but you can do better!\n")
 
+def update_steps_worksheet(data):
+   
+    
 
 print("Welcome to our StepCounter App\n")
 print("This app was created for keep track of daily steps for weightloss\n")
@@ -96,6 +99,6 @@ def main():
     username = gather_user_name()
     number_of_steps = daily_steps(username)
     daily_kcal_burned = kcal_burned(username, number_of_steps)
-
+   
 
 main()
