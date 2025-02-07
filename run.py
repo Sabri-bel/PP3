@@ -1,7 +1,7 @@
 # Your code goes here.
 # You can delete these comments, but do not change the name of this file
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
-import gspread
+#import gspread
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
@@ -82,7 +82,7 @@ def kcal_burned(username, number_of_steps):
         print(f"{username}, you burned {daily_kcal_burned} kcal so far, \
               but you can do better!\n")
 
-def update_steps_worksheet(data):
+#def update_steps_worksheet(data):
    
     
 
